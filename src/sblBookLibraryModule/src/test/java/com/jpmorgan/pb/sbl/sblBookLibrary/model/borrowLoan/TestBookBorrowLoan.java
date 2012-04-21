@@ -22,4 +22,9 @@ public class TestBookBorrowLoan {
     assertEquals("Borrow Loan start date should be null", borrowLoan.getBorrowLoanStartDate(), null);
     assertEquals("Borrow LOan end date should be null", borrowLoan.getBorrowLoanEndDate(), null);
   }
+  
+  @Test
+  public void testVariousFlowsFromHereNow() {
+    assertEquals(1,2);
+  }
 }

@@ -79,7 +79,7 @@ public class BookBorrowLoan implements BorrowLoanState, Versioned {
     return state.getClass().getSimpleName();
   }
 
-  // INentionally package level setter
+  // Intentionally package level setter
   void setState(BorrowLoanState state) throws IllegalStateChangeException {
       this.state = state;
   }
@@ -100,13 +100,13 @@ public class BookBorrowLoan implements BorrowLoanState, Versioned {
   }
 
   @Override
-  public void setToConfirmed() throws IllegalStateChangeException {
-    state.setToConfirmed();
+  public void setToConfirmedInPrinciple() throws IllegalStateChangeException {
+    state.setToConfirmedInPrinciple();
   }
 
   @Override
-  public void setToDeclined() throws IllegalStateChangeException {
-    state.setToDeclined();
+  public void setToLoanerDeclined() throws IllegalStateChangeException {
+    state.setToLoanerDeclined();
   }
 
   @Override
@@ -120,13 +120,13 @@ public class BookBorrowLoan implements BorrowLoanState, Versioned {
   }
 
   @Override
-  public void setToReturned() throws IllegalStateChangeException {
-    state.setToReturned();
+  public void setToBookReturned() throws IllegalStateChangeException {
+    state.setToBookReturned();
   }
 
   @Override
-  public void setToCancelled() throws IllegalStateChangeException {
-    state.setToCancelled();
+  public void setToBorrowerCancelled() throws IllegalStateChangeException {
+    state.setToBorrowerCancelled();
   }
 
 }

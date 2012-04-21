@@ -1,56 +1,56 @@
 package com.jpmorgan.pb.sbl.sblBookLibrary.model.borrowLoan;
 
-class InitialisedState extends AbstractBorrowLoanState {
+public class ActiveState extends AbstractBorrowLoanState {
 
   private BookBorrowLoan bookBorrowLoan;
-
-  public InitialisedState(BookBorrowLoan bookBorrowLoan) {
+  
+  public ActiveState(BookBorrowLoan bookBorrowLoan) {
     this.bookBorrowLoan = bookBorrowLoan;
   }
 
   @Override
   public void setToPreInitialise() throws IllegalStateChangeException {
-    logWarningAndThrowException("Cannot move from Initialised State to PreInitialised!");
+    logWarningAndThrowException("Cannot move from Active In Principle State to PreInitialised!");
   }
 
   @Override
   public void setToInitialised() throws IllegalStateChangeException {
-    logWarningAndThrowException("Cannot move from Initialised State to Initialised!");
+    logWarningAndThrowException("Cannot move from Active In Principle State to PreInitialised!");
   }
 
   @Override
   public void setToProposed() throws IllegalStateChangeException {
-    bookBorrowLoan.setState(new ProposedState(bookBorrowLoan));
+    logWarningAndThrowException("Cannot move from Active In Principle State to Proposed!");
   }
 
   @Override
   public void setToConfirmedInPrinciple() throws IllegalStateChangeException {
-    logWarningAndThrowException("Cannot move from Initialised State to Confirmed!");
+    logWarningAndThrowException("Cannot move from Active In Principle State to Confirmed!");
   }
 
   @Override
   public void setToLoanerDeclined() throws IllegalStateChangeException {
-    logWarningAndThrowException("Cannot move from Initialised State to Declined!");
+    logWarningAndThrowException("Cannot move from Active In Principle State to Proposed!");
   }
 
   @Override
   public void setToActive() throws IllegalStateChangeException {
-    logWarningAndThrowException("Cannot move from Initialised State to Active!");
+    logWarningAndThrowException("Cannot move from Active In Principle State to Proposed!");
   }
 
   @Override
   public void setToOverdue() throws IllegalStateChangeException {
-    logWarningAndThrowException("Cannot move from Initialised State to Overdue!");
+    bookBorrowLoan.setState(new OverdueState(bookBorrowLoan));
   }
 
   @Override
   public void setToBookReturned() throws IllegalStateChangeException {
-    logWarningAndThrowException("Cannot move from Initialised State to Returned!");
+    bookBorrowLoan.setState(new BookReturnedState(bookBorrowLoan));
   }
 
   @Override
   public void setToBorrowerCancelled() throws IllegalStateChangeException {
-    bookBorrowLoan.setState(new BorrowerCancelledState(bookBorrowLoan));
+    logWarningAndThrowException("Cannot move from Active In Principle State to Proposed!");
   }
 
 }

@@ -8,15 +8,15 @@ public interface BorrowLoanState {
 
   public void setToProposed() throws IllegalStateChangeException;
 
-  public void setToConfirmed() throws IllegalStateChangeException;
+  public void setToConfirmedInPrinciple() throws IllegalStateChangeException;
 
-  public void setToDeclined() throws IllegalStateChangeException;
+  public void setToLoanerDeclined() throws IllegalStateChangeException;
 
   public void setToActive() throws IllegalStateChangeException;
 
   public void setToOverdue() throws IllegalStateChangeException;
 
-  public void setToReturned() throws IllegalStateChangeException;
+  public void setToBookReturned() throws IllegalStateChangeException;
 
-  public void setToCancelled() throws IllegalStateChangeException;
+  public void setToBorrowerCancelled() throws IllegalStateChangeException;
 }

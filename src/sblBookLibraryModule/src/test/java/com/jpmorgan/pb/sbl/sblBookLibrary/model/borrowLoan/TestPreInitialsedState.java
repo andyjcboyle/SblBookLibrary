@@ -35,13 +35,13 @@ public class TestPreInitialsedState {
   @Test(expected=IllegalStateChangeException.class)
   public void testCannotMoveToConfirmedState() throws IllegalStateChangeException {
     PreInitialisedState state = new PreInitialisedState(borrowLoan);
-    state.setToConfirmed();
+    state.setToConfirmedInPrinciple();
   }
   
   @Test(expected=IllegalStateChangeException.class)
   public void testCannotMoveToDeclinedState() throws IllegalStateChangeException {
     PreInitialisedState state = new PreInitialisedState(borrowLoan);
-    state.setToDeclined();
+    state.setToLoanerDeclined();
   }
 
   @Test(expected=IllegalStateChangeException.class)
@@ -59,13 +59,13 @@ public class TestPreInitialsedState {
   @Test(expected=IllegalStateChangeException.class)
   public void testCannotMoveToReturnedState() throws IllegalStateChangeException {
     PreInitialisedState state = new PreInitialisedState(borrowLoan);
-    state.setToReturned();
+    state.setToBookReturned();
   }
 
   @Test
-  public void testCannotMoveToCancelledState() throws IllegalStateChangeException {
+  public void testCanMoveToCancelledState() throws IllegalStateChangeException {
     PreInitialisedState state = new PreInitialisedState(borrowLoan);
-    state.setToCancelled();
+    state.setToBorrowerCancelled();
   }
 
 
