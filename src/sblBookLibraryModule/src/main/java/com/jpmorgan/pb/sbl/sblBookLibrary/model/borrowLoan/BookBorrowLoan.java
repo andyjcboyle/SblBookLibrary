@@ -1,12 +1,16 @@
 package com.jpmorgan.pb.sbl.sblBookLibrary.model.borrowLoan;
 
 import org.joda.time.LocalDate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.jpmorgan.pb.sbl.sblBookLibrary.common.Versioned;
 import com.jpmorgan.pb.sbl.sblBookLibrary.model.book.Book;
 import com.jpmorgan.pb.sbl.sblBookLibrary.model.people.Person;
 
 public class BookBorrowLoan implements BorrowLoanState, Versioned {
+
+  private final Logger log = LoggerFactory.getLogger(this.getClass());
 
   private long id;
   private Person borrower;
@@ -81,7 +85,7 @@ public class BookBorrowLoan implements BorrowLoanState, Versioned {
 
   // Intentionally package level setter
   void setState(BorrowLoanState state) throws IllegalStateChangeException {
-      this.state = state;
+    this.state = state;
   }
 
   @Override
@@ -91,16 +95,32 @@ public class BookBorrowLoan implements BorrowLoanState, Versioned {
 
   @Override
   public void setToInitialised() throws IllegalStateChangeException {
+    if (borrower == null || book == null || borrowLoanStartDate == null) {
+      final String ERROR_MSG = "Minimum criteria not set to change state to Initialised. Need to set 'borrower', "
+          + "'book' and the 'borrow loan start date'.";
+      log.warn(ERROR_MSG);
+      throw new IllegalStateChangeException(ERROR_MSG);
+    }
     state.setToInitialised();
   }
 
   @Override
   public void setToProposed() throws IllegalStateChangeException {
+    if (lender == null) {
+      final String ERROR_MSG = "Minimum criteria not set to change state to Proposed. Need to set 'lender'";
+      log.warn(ERROR_MSG);
+      throw new IllegalStateChangeException(ERROR_MSG);
+    }
     state.setToProposed();
   }
 
   @Override
   public void setToConfirmedInPrinciple() throws IllegalStateChangeException {
+    if ( tradeAgreedDate == null) {
+      final String ERROR_MSG = "Minimum criteria not set to change state to ConfirmedInPrinciple. Need to set 'tradeAgreedDate'";
+      log.warn(ERROR_MSG);
+      throw new IllegalStateChangeException(ERROR_MSG);
+    }
     state.setToConfirmedInPrinciple();
   }
 
@@ -121,6 +141,11 @@ public class BookBorrowLoan implements BorrowLoanState, Versioned {
 
   @Override
   public void setToBookReturned() throws IllegalStateChangeException {
+    if ( borrowLoanEndDate == null) {
+      final String ERROR_MSG = "Minimum criteria not set to change state to BookReturned. Need to set 'borrowLoanEndDate'";
+      log.warn(ERROR_MSG);
+      throw new IllegalStateChangeException(ERROR_MSG);
+    }
     state.setToBookReturned();
   }
 
