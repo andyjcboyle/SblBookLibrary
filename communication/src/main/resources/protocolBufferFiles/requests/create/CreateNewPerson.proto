@@ -1,0 +1,10 @@
+package tutorial;
+
+option java_package = "com.jpmorgan.pb.sbl.sblBookLibrary.communication.request.protos";
+option java_outer_classname = "CreateNewPersonRequestProtos";
+
+message CreateNewPersonRequest {
+  required string firstName = 1;
+  optional string surname = 2;
+  optional string emailAddress = 3;
+}
