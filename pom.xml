@@ -8,10 +8,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>src/sblBookLibraryModule</module>
+		<module>sblBookLibraryModule</module>
 		<module>ear</module>
-		<module>SblBookLibrary_Communication</module>
-		<module>SblBookLibrary_Services</module>
+		<module>SblBookLibrary_Api</module>
 	</modules>
 
 	<repositories>
