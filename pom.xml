@@ -8,8 +8,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>SblBookLibrary_Core</module>
 		<module>SblBookLibrary_Api</module>
+		<module>SblBookLibrary_Core</module>
 		<module>ear</module>
 	</modules>
 
@@ -32,7 +32,6 @@
 
 
 	<build>
-
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
 
@@ -76,7 +75,6 @@
 					</modules>
 				</configuration>
 			</plugin>
-
 		</plugins>
 
 	</build>
@@ -157,11 +155,6 @@
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<version>1.9.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
-			<version>2.4.1</version>
 		</dependency>
 
 	</dependencies>

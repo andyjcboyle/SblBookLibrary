@@ -17,11 +17,16 @@
 				<configuration>
 					<applicationName>SblBookLibrary-ear</applicationName>
 					<displayName>SBL Book Library</displayName>
-					<description>This app is just to have a central place to manage	Book Loans within a team</description>
+					<description>This app is just to have a central place to manage
+						Book Loans within a team</description>
 					<modules>
 						<ejbModule>
 							<groupId>SblBookLibrary</groupId>
 							<artifactId>SblBookLibraryModule</artifactId>
+						</ejbModule>
+						<ejbModule>
+							<groupId>SblBookLibrary_Api</groupId>
+							<artifactId>SblBookLibrary_Api</artifactId>
 						</ejbModule>
 					</modules>
 				</configuration>
@@ -30,6 +35,12 @@
 	</build>
 
 	<dependencies>
+		<dependency>
+			<groupId>SblBookLibrary_Api</groupId>
+			<artifactId>SblBookLibrary_Api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
 		<dependency>
 			<groupId>SblBookLibrary</groupId>
 			<artifactId>SblBookLibraryModule</artifactId>
