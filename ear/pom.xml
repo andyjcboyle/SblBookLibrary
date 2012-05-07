@@ -8,7 +8,7 @@
 	<packaging>ear</packaging>
 
 	<build>
-		<directory>../target/finalEar</directory>
+		<directory>target</directory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -22,10 +22,10 @@
 					<modules>
 						<ejbModule>
 							<groupId>SblBookLibrary</groupId>
-							<artifactId>SblBookLibraryModule</artifactId>
+							<artifactId>SblBookLibrary_Core</artifactId>
 						</ejbModule>
 						<ejbModule>
-							<groupId>SblBookLibrary_Api</groupId>
+							<groupId>SblBookLibrary</groupId>
 							<artifactId>SblBookLibrary_Api</artifactId>
 						</ejbModule>
 					</modules>
@@ -36,14 +36,14 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>SblBookLibrary_Api</groupId>
+			<groupId>SblBookLibrary</groupId>
 			<artifactId>SblBookLibrary_Api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<type>ejb</type>
 		</dependency>
 		<dependency>
 			<groupId>SblBookLibrary</groupId>
-			<artifactId>SblBookLibraryModule</artifactId>
+			<artifactId>SblBookLibrary_Core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<type>ejb</type>
 		</dependency>
