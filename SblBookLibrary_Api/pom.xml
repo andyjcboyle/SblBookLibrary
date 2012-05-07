@@ -7,10 +7,16 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
-	<groupId>SblBookLibrary</groupId>
 	<artifactId>SblBookLibrary_Api</artifactId>
 	<packaging>jar</packaging>
 
+<build>
+	<plugins>
+	 <plugin>
+	 <artifactId>maven-compiler-plugin</artifactId>
+	 </plugin>
+	</plugins>
+</build>
 	<dependencies>
 
 		<dependency>

@@ -1,4 +1,4 @@
-package com.jpmorgan.pb.sbl.sblBookLibrary.api.borrowLoan;
+package com.jpmorgan.pb.sbl.sblBookLibrary.api.services;
 
 import javax.ejb.Remote;
 

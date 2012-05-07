@@ -8,7 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.jboss.ejb3.annotation.RemoteBinding;
 
-import com.jpmorgan.pb.sbl.sblBookLibrary.api.borrowLoan.TestBean;
+import com.jpmorgan.pb.sbl.sblBookLibrary.api.services.TestBean;
 import com.jpmorgan.pb.sbl.sblBookLibrary.api.utils.JndiBindingConstants;
 import com.jpmorgan.pb.sbl.sblBookLibrary.model.people.Person;
 

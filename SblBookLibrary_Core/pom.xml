@@ -9,9 +9,7 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>SblBookLibrary</groupId>
 	<artifactId>SblBookLibrary_Core</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<repositories>
