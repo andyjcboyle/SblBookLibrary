@@ -39,13 +39,13 @@
 			<groupId>SblBookLibrary</groupId>
 			<artifactId>SblBookLibrary_Api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>jar</type>
+			<type>ejb</type>
 		</dependency>
 		<dependency>
 			<groupId>SblBookLibrary</groupId>
 			<artifactId>SblBookLibrary_Core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>jar</type>
+			<type>ejb</type>
 		</dependency>
 		<dependency>
 			<groupId>javax.ejb</groupId>
