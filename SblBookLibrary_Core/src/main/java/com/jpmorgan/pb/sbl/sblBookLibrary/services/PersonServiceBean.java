@@ -2,8 +2,8 @@ package com.jpmorgan.pb.sbl.sblBookLibrary.services;
 
 import java.util.Set;
 
-import javax.ejb.Stateless;
 import javax.annotation.PostConstruct;
+import javax.ejb.Stateless;
 
 import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
