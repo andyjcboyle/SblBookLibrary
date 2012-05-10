@@ -13,5 +13,5 @@ public interface PersonService {
 	public void editPerson(UnPerson personToEdit);
 	public Set<UnPerson> getAllPersons();
 	public Set<UnPerson> findPersonsWithFirstName(String firstName);
-	public Set<UnPerson> findPersonsWithSurnameName(String firstName);
+	public Set<UnPerson> findPersonsWithSurnameName(String surname);
 }
