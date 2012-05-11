@@ -6,7 +6,7 @@
 	<artifactId>SblBookLibraryEar</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>ear</packaging>
-
+	
 	<build>
 		<directory>target</directory>
 		<plugins>
@@ -19,15 +19,17 @@
 					<displayName>SBL Book Library</displayName>
 					<description>This app is just to have a central place to manage
 						Book Loans within a team</description>
-					<modules>
-						<ejbModule>
+ 					<modules>
+						<jarModule>
 							<groupId>SblBookLibrary</groupId>
 							<artifactId>SblBookLibrary_Core</artifactId>
-						</ejbModule>
-						<ejbModule>
+							<includeInApplicationXml>true</includeInApplicationXml>
+						</jarModule>
+						<jarModule>
 							<groupId>SblBookLibrary</groupId>
 							<artifactId>SblBookLibrary_Api</artifactId>
-						</ejbModule>
+							<includeInApplicationXml>true</includeInApplicationXml>
+						</jarModule> 
 					</modules>
 				</configuration>
 			</plugin>
@@ -39,13 +41,13 @@
 			<groupId>SblBookLibrary</groupId>
 			<artifactId>SblBookLibrary_Api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>ejb</type>
+			<type>jar</type>
 		</dependency>
 		<dependency>
 			<groupId>SblBookLibrary</groupId>
 			<artifactId>SblBookLibrary_Core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>ejb</type>
+			<type>jar</type>
 		</dependency>
 		<dependency>
 			<groupId>javax.ejb</groupId>
