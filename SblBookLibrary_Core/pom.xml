@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<parent>
-		<groupId>SblBookLibrary</groupId>
+		<groupId>eu.icya.SblBookLibrary</groupId>
 		<artifactId>SblBookLibrary</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
@@ -76,7 +76,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>SblBookLibrary</groupId>
+			<groupId>eu.icya.SblBookLibrary</groupId>
 			<artifactId>SblBookLibrary_Api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

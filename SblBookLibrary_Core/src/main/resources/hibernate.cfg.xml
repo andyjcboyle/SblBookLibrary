@@ -19,6 +19,6 @@
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
 		
-		<mapping class="com.jpmorgan.pb.sbl.sblBookLibrary.model.people.Person"/>
+		<mapping class="eu.icya.sblBookLibrary.model.people.Person"/>
 	</session-factory>
 </hibernate-configuration>

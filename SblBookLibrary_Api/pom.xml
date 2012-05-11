@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>SblBookLibrary</artifactId>
-		<groupId>SblBookLibrary</groupId>
+		<groupId>eu.icya.SblBookLibrary</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
